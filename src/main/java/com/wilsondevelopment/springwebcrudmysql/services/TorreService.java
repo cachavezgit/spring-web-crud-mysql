@@ -34,6 +34,14 @@ public class TorreService {
 		return torreRepository.findByNombreTorre(nombre);
 	} 
 	
+	public void saveTorre(Torre torre) {
+		torreRepository.save(torre);
+	}
+	
+	public void deleteTorre(int idTorre) {
+		torreRepository.deleteById(idTorre);
+	}
+	
 	public boolean existsByIdTorre(int idTorre) {
 		return torreRepository.existsById(idTorre);
 	}

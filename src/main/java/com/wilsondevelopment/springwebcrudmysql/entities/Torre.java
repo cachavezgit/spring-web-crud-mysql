@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="torres")
-public class Torre {
+public class Torre { //POJO Plain Old Java Object
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idTorre;

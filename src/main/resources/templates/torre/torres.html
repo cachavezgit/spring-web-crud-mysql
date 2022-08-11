@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	
+	</head>
+	
+	<body>
+		<table>
+			<thead>
+				<th> Id </th>
+				<th> Nombre </th>
+				<th> Apartamentos </th>
+			</thead>
+			<tbody>
+				<tr th:if="${lastorres.empty}">
+					<td colspan="3">No hay torres</td>
+				</tr>
+				<tr th:each="tower:${lastorres}")>
+					<td><span th:text="${tower.idTorre}"></span></td>
+					<td><span th:text="${tower.nombreTorre}"></span></td>
+					<td><span th:text="${tower.cantidadAptos}"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
